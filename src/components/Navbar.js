@@ -39,22 +39,7 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <img 
-              src="/images/logo.png" 
-              alt="Exobase Private Limited" 
-              className="logo-image"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                const textContainer = e.target.nextSibling;
-                if (textContainer) {
-                  textContainer.style.display = 'flex';
-                }
-              }}
-            />
-            <div className="logo-text-container">
-              <span className="logo-text">Exobase</span>
-              <span className="logo-subtitle">Private Limited</span>
-            </div>
+            <span className="logo-text-full">Jagdamba CotFiber LLP</span>
           </Link>
           
           <ul className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>

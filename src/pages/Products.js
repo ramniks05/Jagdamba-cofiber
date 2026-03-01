@@ -124,7 +124,7 @@ const Products = () => {
                 <div className="product-enquiry-actions">
                   <a
                     href={`https://wa.me/919922833338?text=${encodeURIComponent(
-                      `Hello, I would like to enquire about ${product.name} from Exobase Private Limited.`
+                      `Hello, I would like to enquire about ${product.name} from Jagdamba CotFiber LLP.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

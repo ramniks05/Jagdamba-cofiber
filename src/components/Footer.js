@@ -8,15 +8,9 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section footer-about">
-            <div className="footer-logo-wrapper">
-              <img
-                src="/images/logo.png"
-                alt="Exobase Private Limited"
-                className="footer-logo"
-              />
-            </div>
+            <div className="footer-brand-name">Jagdamba CotFiber LLP</div>
             <p className="footer-description">
-              An India-based export house with strong roots in cotton ginning, agri commodities, and global trade.
+              A cotton ginning and processing company built on decades of practical industry experience—quality products through operational strength and long-term relationships.
             </p>
             <div className="social-media">
               <h4>Follow Us</h4>
@@ -131,7 +125,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Exobase Private Limited. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Jagdamba CotFiber LLP. All rights reserved.</p>
         </div>
       </div>
     </footer>

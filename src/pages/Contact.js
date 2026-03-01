@@ -36,7 +36,7 @@ const Contact = () => {
     // Build WhatsApp message
     const whatsappNumber = '919922833338';
     const text = `
-Enquiry from Exobase website
+Enquiry from Jagdamba CotFiber website
 
 Name: ${formData.name}
 Email: ${formData.email}

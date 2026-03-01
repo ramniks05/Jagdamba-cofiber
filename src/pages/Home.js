@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Certificates from '../components/Certificates';
 import './Home.css';
 
 const HERO_SLIDES = [
@@ -65,8 +64,8 @@ const Home = () => {
         <div className="container">
           <div className="highlights-header">
             <span className="highlights-badge">Our Advantages</span>
-            <h2 className="highlights-title">Why Choose Exobase?</h2>
-            <p className="highlights-subtitle">The export partner that delivers reliability, expertise, and results—every time.</p>
+            <h2 className="highlights-title">Why Choose Jagdamba CotFiber?</h2>
+            <p className="highlights-subtitle">Cotton ginning and processing built on decades of experience—quality, transparency, and long-term relationships.</p>
           </div>
           <div className="highlights-grid">
             <div className="highlight-card">
@@ -220,17 +219,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Certificates Section */}
-      <Certificates />
-
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
             <h2>Ready to Partner With Us?</h2>
             <p>
-              Experience the difference that comes from working with an export house 
-              that values preparation, execution, and long-term relationships.
+              Experience the difference that comes from working with a cotton ginning and processing 
+              company that values quality, operational strength, and long-term relationships.
             </p>
             <Link to="/contact" className="btn btn-primary btn-large">
               Get In Touch
