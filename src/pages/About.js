@@ -1,12 +1,42 @@
 import React from 'react';
 import './About.css';
 
-/* Replace these paths with real photos when ready: warehouse, cotton yard, ginning, office/team */
+/* Replace these paths with real photos when ready: warehouse, cotton yard, office/team */
 const OPERATIONS_IMAGES = [
   { id: 'warehouse', title: 'Warehouse', alt: 'Our warehouse and storage operations', src: 'operations/warehouse.png', fallback: 'operations/placeholder.svg' },
-  { id: 'cotton-yard', title: 'Cotton Yard', alt: 'Cotton yard and ginning operations', src: 'operations/cotton-yard.png', fallback: 'operations/placeholder.svg' },
-  { id: 'ginning', title: 'Ginning', alt: 'Double Roller ginning operations', src: 'operations/ginning.png', fallback: 'operations/placeholder.svg' },
+  { id: 'cotton-yard', title: 'Cotton Yard', alt: 'Cotton yard operations', src: 'operations/cotton-yard.png', fallback: 'operations/placeholder.svg' },
   { id: 'office-team', title: 'Office & Team', alt: 'Our office and team', src: 'operations/office-team.png', fallback: 'operations/placeholder.svg' },
+];
+
+const APPROACH_ITEMS = [
+  {
+    id: 'quality',
+    icon: 'QC',
+    title: 'Quality & Discipline',
+    description:
+      'We deliver good quality products through disciplined operations and proper handling systems. Our focus on cotton bales, cotton seed cake, cotton seed, and cotton seed crude oil is backed by decades of ground-level experience.',
+  },
+  {
+    id: 'communication',
+    icon: 'TC',
+    title: 'Transparent Communication',
+    description:
+      'We believe in transparent communication and long-term business relationships. We align our capabilities with buyer requirements and keep our commitments clear and realistic.',
+  },
+  {
+    id: 'export',
+    icon: 'EX',
+    title: 'Export-Oriented Supply',
+    description:
+      'With strong processing capability and infrastructure—68 DR ginning machines, 15 oil expellers, and large warehouse capacity—we are positioned to support export-oriented supply based on buyer requirements.',
+  },
+];
+
+const CORE_VALUES = [
+  { id: 'ops', icon: 'OS', title: 'Operational Strength', description: 'Decades of practical experience in cotton ginning and processing.' },
+  { id: 'quality', icon: 'QL', title: 'Quality', description: 'Good quality products through disciplined operations.' },
+  { id: 'transparency', icon: 'TR', title: 'Transparency', description: 'Transparent communication with buyers and partners.' },
+  { id: 'relationships', icon: 'LR', title: 'Long-term Relationships', description: 'Building trust through reliability and consistency.' },
 ];
 
 const About = () => {
@@ -15,6 +45,7 @@ const About = () => {
       {/* Hero Banner */}
       <section className="about-hero">
         <div className="container">
+          <span className="hero-badge">About Us</span>
           <h1 className="page-title">About Jagdamba CotFiber LLP</h1>
           <p className="page-subtitle">
             A cotton ginning and processing company built on decades of practical industry experience.
@@ -34,10 +65,10 @@ const About = () => {
               <h2>Our Infrastructure</h2>
               <p>Our combined infrastructure includes:</p>
               <ul className="about-infra-list">
-                <li>68 Double Roller (DR) ginning machines</li>
-                <li>15 Oil Expellers</li>
-                <li>Operations spread across approximately 5 acres of land</li>
-                <li>Warehouse storage capacity of approx. 70,000 – 80,000 sq. ft.</li>
+                <li><span className="infra-icon" aria-hidden="true">DR</span>68 Double Roller (DR) ginning machines</li>
+                <li><span className="infra-icon" aria-hidden="true">OE</span>15 Oil Expellers</li>
+                <li><span className="infra-icon" aria-hidden="true">LD</span>Operations spread across approximately 5 acres of land</li>
+                <li><span className="infra-icon" aria-hidden="true">WH</span>Warehouse storage capacity of approx. 70,000 - 80,000 sq. ft.</li>
               </ul>
               <h2>Core Operations</h2>
               <p>
@@ -50,17 +81,6 @@ const About = () => {
                 At Jagdamba CotFiber LLP, our focus remains simple — delivering good quality products through operational strength, transparent communication, and long-term business relationships.
               </p>
             </div>
-            <div className="story-image">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/operations/foundation.jpg`}
-                alt="Jagdamba CotFiber – cotton ginning and processing"
-                className="story-image-photo"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = `${process.env.PUBLIC_URL}/images/operations/placeholder.svg`;
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -68,9 +88,10 @@ const About = () => {
       {/* Our Operations */}
       <section className="operations-section" aria-label="Our operations">
         <div className="container">
+          <span className="section-badge">Operations</span>
           <h2 className="section-title">Our Operations</h2>
           <p className="operations-intro">
-            From warehouse and cotton yard to ginning and our office—see where we work.
+            From warehouse and cotton yard to our office - see where we work.
           </p>
           <div className="operations-grid">
             {OPERATIONS_IMAGES.map((item) => (
@@ -96,26 +117,18 @@ const About = () => {
       {/* Our Approach */}
       <section className="our-approach">
         <div className="container">
+          <span className="section-badge">Approach</span>
           <h2 className="section-title">Our Approach</h2>
           <div className="approach-grid">
-            <div className="approach-card">
-              <h3>Quality & Discipline</h3>
-              <p>
-                We deliver good quality products through disciplined operations and proper handling systems. Our focus on cotton bales, cotton seed cake, cotton seed, and cotton seed crude oil is backed by decades of ground-level experience.
-              </p>
-            </div>
-            <div className="approach-card">
-              <h3>Transparent Communication</h3>
-              <p>
-                We believe in transparent communication and long-term business relationships. We align our capabilities with buyer requirements and keep our commitments clear and realistic.
-              </p>
-            </div>
-            <div className="approach-card">
-              <h3>Export-Oriented Supply</h3>
-              <p>
-                With strong processing capability and infrastructure—68 DR ginning machines, 15 oil expellers, and large warehouse capacity—we are positioned to support export-oriented supply based on buyer requirements.
-              </p>
-            </div>
+            {APPROACH_ITEMS.map((item) => (
+              <div key={item.id} className="approach-card">
+                <div className="card-head">
+                  <span className="card-icon" aria-hidden="true">{item.icon}</span>
+                  <h3>{item.title}</h3>
+                </div>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -123,28 +136,16 @@ const About = () => {
       {/* Values */}
       <section className="values">
         <div className="container">
+          <span className="section-badge">Values</span>
           <h2 className="section-title">Our Core Values</h2>
           <div className="values-grid">
-            <div className="value-item">
-              <div className="value-icon">✓</div>
-              <h3>Operational Strength</h3>
-              <p>Decades of practical experience in cotton ginning and processing.</p>
-            </div>
-            <div className="value-item">
-              <div className="value-icon">✓</div>
-              <h3>Quality</h3>
-              <p>Good quality products through disciplined operations.</p>
-            </div>
-            <div className="value-item">
-              <div className="value-icon">✓</div>
-              <h3>Transparency</h3>
-              <p>Transparent communication with buyers and partners.</p>
-            </div>
-            <div className="value-item">
-              <div className="value-icon">✓</div>
-              <h3>Long-term Relationships</h3>
-              <p>Building trust through reliability and consistency.</p>
-            </div>
+            {CORE_VALUES.map((value) => (
+              <div key={value.id} className="value-item">
+                <div className="value-icon">{value.icon}</div>
+                <h3>{value.title}</h3>
+                <p>{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

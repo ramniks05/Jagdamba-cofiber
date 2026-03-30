@@ -2,10 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
+const HERO_EXTENSIONS = ['jpeg', 'jpg', 'png', 'webp'];
+
 const HERO_SLIDES = [
-  { src: 'hero-slide-1.png', alt: 'Agricultural commodity handling and logistics' },
-  { src: 'hero-slide-2.png', alt: 'Cotton and commodity export operations' },
+  { base: 'banner/banner-1', alt: 'Jagdamba CotFiber banner 1' },
+  { base: 'banner/banner-2', alt: 'Jagdamba CotFiber banner 2' },
+  { base: 'banner/banner-3', alt: 'Jagdamba CotFiber banner 3' },
+  { base: 'banner/banner-4', alt: 'Jagdamba CotFiber banner 4' },
+  { base: 'banner/banner-5', alt: 'Jagdamba CotFiber banner 5' },
 ];
+
+const getImagePath = (relativePath) => `${process.env.PUBLIC_URL}/images/${relativePath}`;
 
 /* Same slots as About: replace with real photos (warehouse, cotton yard, container loading, office/team) */
 const GLIMPSES_IMAGES = [
@@ -32,14 +39,27 @@ const Home = () => {
         <div className="hero-slider">
           {HERO_SLIDES.map((slide, index) => (
             <div
-              key={slide.src}
+              key={slide.base}
               className={`hero-slide ${index === activeSlide ? 'hero-slide-active' : ''}`}
               aria-hidden={index !== activeSlide}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/images/${slide.src}`}
+                src={getImagePath(`${slide.base}.${HERO_EXTENSIONS[0]}`)}
                 alt={slide.alt}
                 className="hero-slide-image"
+                onError={(e) => {
+                  const currentAttempt = Number(e.currentTarget.dataset.attempt || '0');
+                  const nextAttempt = currentAttempt + 1;
+
+                  if (nextAttempt < HERO_EXTENSIONS.length) {
+                    e.currentTarget.dataset.attempt = String(nextAttempt);
+                    e.currentTarget.src = getImagePath(`${slide.base}.${HERO_EXTENSIONS[nextAttempt]}`);
+                    return;
+                  }
+
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = getImagePath('operations/placeholder.svg');
+                }}
               />
             </div>
           ))}
