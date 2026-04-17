@@ -88,7 +88,9 @@ const Footer = () => {
             <h4>Products</h4>
             <ul>
               <li>Rice</li>
-              <li>Cotton</li>
+              <li>Cotton Lint</li>
+              <li>Organic Cotton Lint</li>
+              <li>BCI Cotton Lint</li>
               <li>Maize</li>
               <li>Wheat</li>
               <li>Sugar</li>
@@ -99,11 +101,17 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <p>Tata Capitol Heights, Tower 4, Room 1202,<br />Rambagh, Near VR Mall, Nagpur, Maharashtra – 440003</p>
+              <p>
+                <strong>Jagdamba LLP Unit 01</strong><br />
+                Survey No - 63/1/2, NH 347A, Goiwada, Talegaon Road, Arvi, District - Wardha, 442201
+                <br /><br />
+                <strong>Jagdamba LLP Unit 02</strong><br />
+                SH 241, Deurwada Road, Arvi, District - Wardha, 442201
+              </p>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📧</span>
-              <p>info@exobase.in</p>
+              <p>info@jagdambacotfiber.com</p>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📞</span>
@@ -111,14 +119,14 @@ const Footer = () => {
             </div>
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14895.053!2d79.087656!3d21.128934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c72a2a2a2a2a%3A0x2a2a2a2a2a2a2a2a!2sRambagh%2C%20Nagpur%2C%20Maharashtra%20440003!5e0!3m2!1sen!2sin!4v1706544000!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=Arvi%2C%20Wardha%2C%20Maharashtra&output=embed"
                 width="100%"
                 height="120"
                 style={{ border: 0, borderRadius: '8px', minHeight: '120px' }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Exobase Location"
+                title="Jagdamba CotFiber Units Location"
               />
             </div>
           </div>

@@ -27,7 +27,7 @@ const Products = () => {
     },
     {
       id: 2,
-      name: 'Cotton',
+      name: 'Cotton Lint',
       image: '/images/product/cotton.png',
       description: 'Expertise in cotton ginning and pressing, ensuring superior quality and consistency. Our background in cotton processing gives us deep understanding of the product.',
       features: [
@@ -39,6 +39,30 @@ const Products = () => {
     },
     {
       id: 3,
+      name: 'Organic Cotton Lint',
+      image: '/images/product/cotton.png',
+      description: 'Organic cotton lint processed with careful segregation and quality handling to support buyers looking for certified and traceable sustainable cotton supply.',
+      features: [
+        'Organic-focused handling',
+        'Segregated stock management',
+        'Traceability support',
+        'Reliable quality consistency'
+      ]
+    },
+    {
+      id: 4,
+      name: 'BCI Cotton Lint',
+      image: '/images/product/cotton.png',
+      description: 'BCI cotton lint supplied with disciplined processing and documentation support for buyers aligned with Better Cotton sourcing requirements.',
+      features: [
+        'Better Cotton aligned supply',
+        'Process discipline',
+        'Documentation support',
+        'Buyer requirement focused'
+      ]
+    },
+    {
+      id: 5,
       name: 'Maize',
       image: '/images/product/maize.png',
       description: 'High-grade maize supplied based on buyer requirements and market conditions. We ensure proper handling and storage to maintain quality.',
@@ -50,7 +74,7 @@ const Products = () => {
       ]
     },
     {
-      id: 4,
+      id: 6,
       name: 'Wheat',
       image: '/images/product/wheat.png',
       description: 'Quality wheat exports meeting international standards and specifications. We handle sourcing, storage, and shipment with precision.',
@@ -62,7 +86,7 @@ const Products = () => {
       ]
     },
     {
-      id: 5,
+      id: 7,
       name: 'Sugar',
       image: '/images/product/sugar.png',
       description: 'Premium sugar exports with proper handling and storage management. We ensure quality is maintained throughout the supply chain.',

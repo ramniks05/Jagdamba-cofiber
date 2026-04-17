@@ -176,7 +176,7 @@ ${formData.message}
                 <h2>Get In Touch</h2>
                 <p className="info-description">
                   We believe trust is built through honest communication. Reach out to us 
-                  for any inquiries about our products, services, or partnership opportunities.
+                  for any inquiries about our products, services, or partnership opportunities across both factory units.
                 </p>
 
                 <div className="info-items">
@@ -196,9 +196,11 @@ ${formData.message}
                   <div className="info-item">
                     <div className="info-icon">📍</div>
                     <div className="info-content">
-                      <h3>Location</h3>
-                      <p>Tata Capitol Heights, Tower 4, Room 1202,</p>
-                      <p>Rambagh, Near VR Mall, Nagpur, Maharashtra – 440003</p>
+                      <h3>Factory Locations</h3>
+                      <p><strong>Jagdamba LLP Unit 01</strong></p>
+                      <p>Survey No - 63/1/2, NH 347A, Goiwada, Talegaon Road, Arvi, District - Wardha, 442201</p>
+                      <p><strong>Jagdamba LLP Unit 02</strong></p>
+                      <p>SH 241, Deurwada Road, Arvi, District - Wardha, 442201</p>
                     </div>
                   </div>
 
@@ -206,7 +208,7 @@ ${formData.message}
                     <div className="info-icon">📧</div>
                     <div className="info-content">
                       <h3>Email</h3>
-                      <p>info@exobase.in</p>
+                      <p>info@jagdambacotfiber.com</p>
                     </div>
                   </div>
 
@@ -218,14 +220,6 @@ ${formData.message}
                     </div>
                   </div>
 
-                  <div className="info-item">
-                    <div className="info-icon">⏰</div>
-                    <div className="info-content">
-                      <h3>Business Hours</h3>
-                      <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p>Saturday: 9:00 AM - 1:00 PM</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

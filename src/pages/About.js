@@ -70,6 +70,21 @@ const About = () => {
                 <li><span className="infra-icon" aria-hidden="true">LD</span>Operations spread across approximately 5 acres of land</li>
                 <li><span className="infra-icon" aria-hidden="true">WH</span>Warehouse storage capacity of approx. 70,000 - 80,000 sq. ft.</li>
               </ul>
+              <h2>Our Factory Units</h2>
+              <ul className="about-infra-list">
+                <li>
+                  <span className="infra-icon" aria-hidden="true">U1</span>
+                  <span>
+                    <strong>Jagdamba LLP Unit 01:</strong> Survey No - 63/1/2, NH 347A, Goiwada, Talegaon Road, Arvi, District - Wardha, 442201
+                  </span>
+                </li>
+                <li>
+                  <span className="infra-icon" aria-hidden="true">U2</span>
+                  <span>
+                    <strong>Jagdamba LLP Unit 02:</strong> SH 241, Deurwada Road, Arvi, District - Wardha, 442201
+                  </span>
+                </li>
+              </ul>
               <h2>Core Operations</h2>
               <p>
                 Our core operations include processing and supply of <strong>cotton bales</strong> (including conventional, Organic, Better Cotton, and Regen Agri lint) along with <strong>cotton seed cake</strong>, <strong>cotton seed</strong>, and <strong>cotton seed crude oil</strong>, supported by disciplined operations and proper handling systems.

@@ -22,6 +22,25 @@ const GLIMPSES_IMAGES = [
   { id: 'office-team', title: 'Office & Team', alt: 'Our office and team', src: 'operations/office-team.png', fallback: 'operations/placeholder.svg' },
 ];
 
+const CERTIFICATION_STANDARDS = [
+  {
+    id: 'gots',
+    name: 'Global Organic Textile Standard (GOTS)',
+    logo: 'certificates/gots.png',
+    alt: 'Global Organic Textile Standard (GOTS) logo',
+    description:
+      'The Global Organic Textile Standard (GOTS) is the worldwide leading textile processing standard for organic fibres. It defines high-level environmental and social criteria across the entire textile supply chain - from harvesting raw materials to labelling of the finished product.',
+  },
+  {
+    id: 'better-cotton',
+    name: 'Better Cotton CoC and Cotton Consumption Independent Assessment',
+    logo: 'certificates/bci.png',
+    alt: 'Better Cotton Initiative (BCI) logo',
+    description:
+      'Better Cotton CoC and Cotton Consumption Independent Assessment supports responsible cotton sourcing with traceability and verification across the supply chain, helping buyers align with Better Cotton requirements.',
+  },
+];
+
 const Home = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -92,7 +111,7 @@ const Home = () => {
               <div className="highlight-icon">🌾</div>
               <h3>Deep Product Knowledge</h3>
               <p>
-                We focus on a limited set of products—rice, cotton, maize, wheat, and sugar— 
+                We focus on a limited set of products—rice, cotton lint, organic cotton lint, BCI cotton lint, maize, wheat, and sugar— 
                 understanding them deeply rather than trading across everything.
               </p>
             </div>
@@ -162,9 +181,33 @@ const Home = () => {
                   <img src={`${process.env.PUBLIC_URL}/images/product/cotton.png`} alt="Cotton" />
                 </div>
               </div>
-              <h3>Cotton</h3>
+              <h3>Cotton Lint</h3>
               <p>Expertise in cotton ginning and pressing, ensuring superior quality and consistency.</p>
               <span className="product-tag">Textile</span>
+            </div>
+            <div className="product-card">
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/cotton.png`} alt="Organic Cotton Lint" />
+                </div>
+              </div>
+              <h3>Organic Cotton Lint</h3>
+              <p>Organic cotton lint with careful handling and quality consistency for sustainable sourcing needs.</p>
+              <span className="product-tag">Organic</span>
+            </div>
+            <div className="product-card">
+              <div className="product-card-accent" />
+              <div className="product-icon-wrap">
+                <div className="product-icon-ring" />
+                <div className="product-icon">
+                  <img src={`${process.env.PUBLIC_URL}/images/product/cotton.png`} alt="BCI Cotton Lint" />
+                </div>
+              </div>
+              <h3>BCI Cotton Lint</h3>
+              <p>BCI cotton lint supplied with process discipline and buyer-focused quality requirements.</p>
+              <span className="product-tag">Better Cotton</span>
             </div>
             <div className="product-card">
               <div className="product-card-accent" />
@@ -234,6 +277,41 @@ const Home = () => {
                 </div>
                 <figcaption className="glimpses-photo-caption">{item.title}</figcaption>
               </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Standards & Compliance */}
+      <section className="standards-section" aria-label="Standards and compliance">
+        <div className="container">
+          <div className="standards-header">
+            <span className="standards-badge">Standards</span>
+            <h2 className="section-title">Standards & Compliance</h2>
+            <p className="standards-intro">
+              We align our processes with recognized standards to support quality, sustainability, and responsible operations.
+            </p>
+          </div>
+
+          <div className="standards-grid">
+            {CERTIFICATION_STANDARDS.map((item) => (
+              <article key={item.id} className="standard-card">
+                <div className="standard-logo-wrap">
+                  <img
+                    src={getImagePath(item.logo)}
+                    alt={item.alt}
+                    className="standard-logo"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = getImagePath('operations/placeholder.svg');
+                    }}
+                  />
+                </div>
+                <div className="standard-content">
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>

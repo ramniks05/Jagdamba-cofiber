@@ -27,9 +27,9 @@ const Navbar = () => {
               <span className="top-header-icon">📞</span>
               <span>+91 99228-33338</span>
             </a>
-            <a href="mailto:info@exobase.in" className="top-header-item">
+            <a href="mailto:info@jagdambacotfiber.com" className="top-header-item">
               <span className="top-header-icon">📧</span>
-              <span>info@exobase.in</span>
+              <span>info@jagdambacotfiber.com</span>
             </a>
           </div>
         </div>
